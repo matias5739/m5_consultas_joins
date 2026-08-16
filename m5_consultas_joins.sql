@@ -72,16 +72,12 @@ FROM (
     SELECT
     tv.canal_venta AS canal,
     tv.monto_total
-
     FROM fact_ventas AS tv
         WHERE canal_venta = 'Web'
-    
     UNION ALL
-    
     SELECT
     tv.canal_venta AS canal,
     tv.monto_total
-
     FROM fact_ventas AS tv
         WHERE canal_venta = 'Local'
 ) AS tabla_resultante_canal
